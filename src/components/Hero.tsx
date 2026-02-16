@@ -1,21 +1,37 @@
-import { Box, Button, Typography } from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
 import styled from "styled-components";
 import { useTranslation } from "../i18n/useTranslation";
 import { useState } from "react";
 import GameModal from "./GameModal";
+import {getButtonBackground} from "../utils/getBackground";
+import LogoText from "../assets/images/logo_text.png";
+import LogoImg from "../assets/images/logo_img.png";
+import BgImg from "../assets/images/bg.png";
 
 const Wrapper = styled(Box)`
-  min-height: 100vh;
-  background: radial-gradient(circle, #001f3f, #000814);
+    
+    min-height: 910px;
+    background: url(${BgImg}) no-repeat center center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
 
+const MainButton = styled.button<{ geo: string}>`
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: ${({ geo }) => getButtonBackground(geo)};
+    color: #ffffff;
+    padding: 16px 112px;
+    margin-top: 30px;
+`
+
 interface Props {
     geo: string;
 }
+
 
 export default function Hero({ geo }: Props) {
     const t = useTranslation(geo);
@@ -23,26 +39,18 @@ export default function Hero({ geo }: Props) {
 
     return (
         <Wrapper>
-            <Typography
-                sx={{
-                    fontSize: {
-                        xs: "28px",
-                        sm: "36px",
-                        md: "48px",
-                        lg: "64px",
-                    },
-                }}
+            <Stack
+                direction="column"
+                gap={2}
             >
-                Casino Royale
-            </Typography>
+                <img src={LogoText} alt="logo"/>
+                <img src={LogoImg} alt="logo"/>
+            </Stack>
 
-            <Button
-                variant="contained"
-                sx={{ mt: 4 }}
-                onClick={() => setOpen(true)}
-            >
-                {t.openGame}
-            </Button>
+
+            <MainButton geo={geo}>
+                <Typography>{t.openGame}</Typography>
+            </MainButton>
 
             <GameModal open={open} onClose={() => setOpen(false)} />
         </Wrapper>

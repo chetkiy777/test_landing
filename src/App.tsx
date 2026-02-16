@@ -2,8 +2,7 @@ import { useParams } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { getThemeByGeo } from "./theme";
 import Hero from "./components/Hero";
-import DownloadBlock from "./components/DownloadBlock";
-import {GeoSwitcher} from "./components/GeoSwitcher";
+import FooterBlock from "./components/FooterBlock";
 
 export default function App() {
   const { geo = "ru" } = useParams();
@@ -13,9 +12,8 @@ export default function App() {
   return (
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <GeoSwitcher />
         <Hero geo={geo} />
-        <DownloadBlock geo={geo} />
+        <FooterBlock geo={geo} />
       </ThemeProvider>
   );
 }
