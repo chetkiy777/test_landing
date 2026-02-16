@@ -48,7 +48,7 @@ export default function Hero({ geo }: Props) {
             </Stack>
 
 
-            <MainButton geo={geo}>
+            <MainButton geo={geo} onClick={() => setOpen(true)}>
                 <Typography>{t.openGame}</Typography>
             </MainButton>
 
