@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.234c759c.css","mappings":"AAAA,KACI,WAAY,CAEZ,aAAc,CADd,UAEJ","sources":["index.css"],"sourcesContent":["body {\n    height: 100%;\n    width: 100%;\n    overflow: auto;\n}"],"names":[],"sourceRoot":""}
