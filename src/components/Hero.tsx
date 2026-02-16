@@ -26,6 +26,7 @@ const MainButton = styled.button<{ geo: string}>`
     color: #ffffff;
     padding: 16px 112px;
     margin-top: 30px;
+    cursor: pointer;
 `
 
 interface Props {
