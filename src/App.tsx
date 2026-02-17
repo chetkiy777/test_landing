@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import {ThemeProvider, CssBaseline, Box, Stack} from "@mui/material";
 import { getThemeByGeo } from "./theme";
 import Hero from "./components/Hero";
 import FooterBlock from "./components/FooterBlock";
@@ -12,8 +12,10 @@ export default function App() {
   return (
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Hero geo={geo} />
-        <FooterBlock geo={geo} />
+          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', minWidth: '100vw' }}>
+            <Hero geo={geo} />
+            <FooterBlock geo={geo} />
+          </Box>
       </ThemeProvider>
   );
 }

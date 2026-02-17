@@ -19,9 +19,11 @@ interface Props {
 
 const Wrapper = styled(Box)<{ geo: string }>`
   padding: 63px 32px;
-    background: ${({ geo }) => getWrapperBackground(geo)};
-  //background: linear-gradient(to right, #02011F 63%, #06225D);
+  background: ${({ geo }) => getWrapperBackground(geo)};
+    background-size: cover;
   display: flex;
+    flex: 1;
+    width: 100%;
   justify-content: space-between;
   gap: 44px;
     
@@ -98,7 +100,7 @@ const DownloadBlock = styled(Box)`
     border: 1px dashed #FF8D6B;
     border-radius: 16px;
     max-width: 390px;
-    min-width: 350px;
+    //min-width: 350px;
     
     & h3 {
         font-size: 24px;
@@ -110,8 +112,9 @@ const DownloadBlock = styled(Box)`
 
 const BlockButton = styled(Box)<{ geo: string }>`
     background: ${({ geo }) => getButtonBackground(geo)};
-    padding: 12px 60px;
+    padding: 12px 40px;
     display: flex;
+    flex: 1;
     gap: 8px; 
     border-radius: 8px;
     cursor: pointer;
@@ -142,7 +145,7 @@ const LinkBlockDesk = styled(Box)`
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    min-width: 260px;
+    //min-width: 260px;
     
     order: 1;
     

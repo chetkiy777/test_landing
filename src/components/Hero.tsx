@@ -10,9 +10,11 @@ import BgImg from "../assets/images/bg.png";
 
 const Wrapper = styled(Box)`
     
-    min-height: 910px;
+    //min-height: 910px;
     background: url(${BgImg}) no-repeat center center;
+    background-size: cover;
   display: flex;
+    flex: 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -24,9 +26,10 @@ const MainButton = styled.button<{ geo: string}>`
     outline: none;
     background: ${({ geo }) => getButtonBackground(geo)};
     color: #ffffff;
-    padding: 16px 112px;
+    padding: 24px 112px;
     margin-top: 30px;
     cursor: pointer;
+    margin-bottom: 40px;
 `
 
 interface Props {
@@ -44,8 +47,8 @@ export default function Hero({ geo }: Props) {
                 direction="column"
                 gap={2}
             >
-                <img src={LogoText} alt="logo"/>
-                <img src={LogoImg} alt="logo"/>
+                <img src={LogoText} alt="logo text"/>
+                <img src={LogoImg} alt="logo image"/>
             </Stack>
 
 
