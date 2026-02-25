@@ -11,7 +11,7 @@ import BgImg from "../assets/images/bg.png";
 const Wrapper = styled(Box)`
     
     min-height: 910px;
-    background: url(${BgImg}) no-repeat center center;
+    background: url(${BgImg}) no-repeat;
     background-size: cover;
   display: flex;
     flex: 1;
