@@ -12,7 +12,7 @@ export default function App() {
   return (
       <ThemeProvider theme={theme}>
         <CssBaseline />
-          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', minWidth: '100vw' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Hero geo={geo} />
             <FooterBlock geo={geo} />
           </Box>

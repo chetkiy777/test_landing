@@ -97,10 +97,9 @@ const DownloadBlock = styled(Box)`
     padding: 24px 60px;
     align-items: center;
     text-align: center;
-    border: 1px dashed #FF8D6B;
+    border: 3px dashed #FF8D6B;
     border-radius: 16px;
-    max-width: 390px;
-    //min-width: 350px;
+    min-width: 350px;
     
     & h3 {
         font-size: 24px;
@@ -112,14 +111,15 @@ const DownloadBlock = styled(Box)`
 
 const BlockButton = styled(Box)<{ geo: string }>`
     background: ${({ geo }) => getButtonBackground(geo)};
-    padding: 12px 40px;
+    padding: 18px 40px;
     display: flex;
-    flex: 1;
+    align-items: center;
+    justify-content: center;
     gap: 8px; 
     border-radius: 8px;
     cursor: pointer;
     margin-top: 16px;
-    
+    min-width: 240px;
     & img {
         max-width: 16px;    
     }

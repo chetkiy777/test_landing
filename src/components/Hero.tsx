@@ -10,7 +10,7 @@ import BgImg from "../assets/images/bg.png";
 
 const Wrapper = styled(Box)`
     
-    //min-height: 910px;
+    min-height: 910px;
     background: url(${BgImg}) no-repeat center center;
     background-size: cover;
   display: flex;
@@ -26,10 +26,11 @@ const MainButton = styled.button<{ geo: string}>`
     outline: none;
     background: ${({ geo }) => getButtonBackground(geo)};
     color: #ffffff;
-    padding: 24px 112px;
+    padding: 18px 112px;
     margin-top: 30px;
     cursor: pointer;
     margin-bottom: 40px;
+    text-transform: uppercase;
 `
 
 interface Props {
